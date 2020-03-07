@@ -1,19 +1,73 @@
 
 function toUni(input) {
 	if(!input || input == '') return input;
-	var nigahita = (DPR_prefs['nigahita']?'ṁ':'ṃ'); 
-	var Nigahita = (DPR_prefs['nigahita']?'Ṁ':'Ṃ'); 
+	var nigahita = (DPR_prefs['nigahita']?'ṁ':'ṃ');
+	var Nigahita = (DPR_prefs['nigahita']?'Ṁ':'Ṃ');
 
-	input = input.replace(/aa/g, 'ā').replace(/ii/g, 'ī').replace(/uu/g, 'ū').replace(/\.t/g, 'ṭ').replace(/\.d/g, 'ḍ').replace(/\"nk/g, 'ṅk').replace(/\"ng/g, 'ṅg').replace(/\.n/g, 'ṇ').replace(/\.m/g, nigahita).replace(/\u1E41/g, nigahita).replace(/\~n/g, 'ñ').replace(/\.l/g, 'ḷ').replace(/AA/g, 'Ā').replace(/II/g, 'Ī').replace(/UU/g, 'Ū').replace(/\.T/g, 'Ṭ').replace(/\.D/g, 'Ḍ').replace(/\"N/g, 'Ṅ').replace(/\.N/g, 'Ṇ').replace(/\.M/g, Nigahita).replace(/\~N/g, 'Ñ').replace(/\.L/g, 'Ḷ').replace(/\.ll/g,'ḹ').replace(/\.r/g,'ṛ').replace(/\.rr/g,'ṝ').replace(/\.s/g,'ṣ').replace(/"s/g,'ś').replace(/\.h/g,'ḥ');
-		
+	input = input
+      .replace(/aa/g, 'ā')
+      .replace(/ii/g, 'ī')
+      .replace(/uu/g, 'ū')
+      .replace(/\.t/g, 'ṭ')
+      .replace(/\.d/g, 'ḍ')
+      .replace(/\"nk/g, 'ṅk')
+      .replace(/\"ng/g, 'ṅg')
+      .replace(/\.n/g, 'ṇ')
+      .replace(/\.m/g, nigahita)
+      .replace(/\u1E41/g, nigahita)
+      .replace(/\~n/g, 'ñ')
+      .replace(/\.l/g, 'ḷ')
+      .replace(/AA/g, 'Ā')
+      .replace(/II/g, 'Ī')
+      .replace(/UU/g, 'Ū')
+      .replace(/\.T/g, 'Ṭ')
+      .replace(/\.D/g, 'Ḍ')
+      .replace(/\"N/g, 'Ṅ')
+      .replace(/\.N/g, 'Ṇ')
+      .replace(/\.M/g, Nigahita)
+      .replace(/\~N/g, 'Ñ')
+      .replace(/\.L/g, 'Ḷ')
+      .replace(/\.ll/g,'ḹ')
+      .replace(/\.r/g,'ṛ')
+      .replace(/\.rr/g,'ṝ')
+      .replace(/\.s/g,'ṣ')
+      .replace(/"s/g,'ś')
+      .replace(/\.h/g,'ḥ')
+      .replace(/"n/g, 'ṅ') // this is useful when converting sandhi-changed final niggahiita
+    ;
+
 	return input;
 }
 
 function toUniRegEx(input) {
 	if(!input || input == '') return input;
-	var nigahita = (DPR_prefs['nigahita']?'ṁ':'ṃ'); 
-	var Nigahita = (DPR_prefs['nigahita']?'Ṁ':'Ṃ'); 
-	input = input.replace(/aa/g, 'ā').replace(/ii/g, 'ī').replace(/uu/g, 'ū').replace(/\\\.t/g, 'ṭ').replace(/\\\.d/g, 'ḍ').replace(/\"nk/g, 'ṅk').replace(/\"ng/g, 'ṅg').replace(/\\\.n/g, 'ṇ').replace(/\\\.m/g, nigahita).replace(/\u1E41/g, nigahita).replace(/\~n/g, 'ñ').replace(/\\\.l/g, 'ḷ').replace(/AA/g, 'Ā').replace(/II/g, 'Ī').replace(/UU/g, 'Ū').replace(/\\\.T/g, 'Ṭ').replace(/\\\.D/g, 'Ḍ').replace(/\"N/g, 'Ṅ').replace(/\\\.N/g, 'Ṇ').replace(/\\\.M/g, Nigahita).replace(/\~N/g, 'Ñ').replace(/\\\.L/g, 'Ḷ');
+	var nigahita = (DPR_prefs['nigahita']?'ṁ':'ṃ');
+	var Nigahita = (DPR_prefs['nigahita']?'Ṁ':'Ṃ');
+	input = input
+      .replace(/aa/g, 'ā')
+      .replace(/ii/g, 'ī')
+      .replace(/uu/g, 'ū')
+      .replace(/\\\.t/g, 'ṭ')
+      .replace(/\\\.d/g, 'ḍ')
+      .replace(/\"nk/g, 'ṅk')
+      .replace(/\"ng/g, 'ṅg')
+      .replace(/\\\.n/g, 'ṇ')
+      .replace(/\\\.m/g, nigahita)
+      .replace(/\u1E41/g, nigahita)
+      .replace(/\~n/g, 'ñ')
+      .replace(/\\\.l/g, 'ḷ')
+      .replace(/AA/g, 'Ā')
+      .replace(/II/g, 'Ī')
+      .replace(/UU/g, 'Ū')
+      .replace(/\\\.T/g, 'Ṭ')
+      .replace(/\\\.D/g, 'Ḍ')
+      .replace(/\"N/g, 'Ṅ')
+      .replace(/\\\.N/g, 'Ṇ')
+      .replace(/\\\.M/g, Nigahita)
+      .replace(/\~N/g, 'Ñ')
+      .replace(/\\\.L/g, 'Ḷ')
+      .replace(/"n/g, 'ṅ') // this is useful when converting sandhi-changed final niggahiita
+    ;
 	return input;
 }
 
@@ -93,7 +147,7 @@ function toSin(input,type) {
 	sinhala['v'] = 'ව';
 	sinhala['s'] = 'ස';
 	sinhala['h'] = 'හ';
-	
+
 	var conj = [];
 
 	conj['kh'] = 'ඛ';
@@ -112,9 +166,9 @@ function toSin(input,type) {
 	conj['mb'] = 'ඹ';
 	conj['rg'] = 'ඟ';
 
-	
+
 	var cons = [];
-	
+
 	cons['k'] = 'ක';
 	cons['g'] = 'ග';
 	cons['ṅ'] = 'ඞ';
@@ -138,7 +192,7 @@ function toSin(input,type) {
 	cons['s'] = 'ස';
 	cons['h'] = 'හ';
 
-	
+
 	var im, i0, i1, i2, i3
 	var output = '';
 	var i = 0;
@@ -151,28 +205,28 @@ function toSin(input,type) {
 		i1 = input.charAt(i);
 		i2 = input.charAt(i+1);
 		i3 = input.charAt(i+2);
-		
+
 		if (vowel[i1]) {
 			if (i == 0 || i0 == 'a') output += vowel[i1];
 			else if (i1 != 'a') {
 				output += sinhala[i1];
 			}
 			i++;
-		}		
+		}
 		else if (conj[i1+i2]) {		// two character match
 			output += conj[i1+i2];
 			i += 2;
 			if(cons[i3]) output += '්';
-		}					
+		}
 		else if (sinhala[i1] && i1 != 'a') {		// one character match except a
 			output += sinhala[i1];
 			i++;
 			if(cons[i2] && i1 != 'ṃ') output += '්';
-		}					
+		}
 		else if (!sinhala[i1]) {
 			if (cons[i0] || (i0 == 'h' && cons[im])) output += '්'; // end word consonant
 			output += i1;
-			i++;				
+			i++;
 			if (vowel[i2]) {  // word-beginning vowel marker
 				output += vowel[i2];
 				i++;
@@ -183,9 +237,9 @@ function toSin(input,type) {
 	if (cons[i1]) output += '්';
 
 	// fudges
-	
+
 	// "‍" zero-width joiner inside of quotes
-	
+
 	output = output.replace(/ඤ්ජ/g, 'ඦ');
 	output = output.replace(/ණ්ඩ/g, 'ඬ');
 	output = output.replace(/න්ද/g, 'ඳ');
@@ -193,7 +247,7 @@ function toSin(input,type) {
 	output = output.replace(/්ර/g, '්‍ර');
 	output = output.replace(/\`+/g, '"');
 	return output;
-}	
+}
 
 
 
@@ -208,8 +262,8 @@ function fromSin(input,type) {
 	vowel['ඌ'] = 'ū';
 	vowel['එ'] = 'e';
 	vowel['ඔ'] = 'o';
-	
-	
+
+
 	vowel['ඒ'] = 'ē';
 	vowel['ඇ'] = 'ai';
 	vowel['ඈ'] = 'āi';
@@ -238,7 +292,7 @@ function fromSin(input,type) {
 
 	var sinhala = [];
 
-	
+
 	sinhala['ං'] = 'ṃ';
 	sinhala['ක'] = 'k';
 	sinhala['ඛ'] = 'kh';
@@ -282,7 +336,7 @@ function fromSin(input,type) {
 	sinhala['ඳ'] = 'nd';
 	sinhala['ඹ'] = 'mb';
 	sinhala['ඟ'] = 'rg';
-	
+
 	var im, i0, i1, i2, i3
 	var output = '';
 	var i = 0;
@@ -291,27 +345,27 @@ function fromSin(input,type) {
 
 	while (i < input.length) {
 		i1 = input.charAt(i);
-		
+
 		if (vowel[i1]) {
 			if(output.charAt(output.length-1) == 'a')
 				output = output.substring(0,output.length-1);
 			output += vowel[i1];
-		}		
-		else if (sinhala[i1]) {		
+		}
+		else if (sinhala[i1]) {
 			output += sinhala[i1]+'a';
-		}					
+		}
 		else
 			output += i1;
 		i++;
 	}
 
 	// fudges
-	
+
 	// "‍" zero-width joiner inside of quotes
-	
+
 	output = output.replace(/a්/g, '');
 	return output;
-}		
+}
 
 function toMyanmar(input,type) {
 	input = input.toLowerCase().replace(/ṁ/g,'ṃ');
@@ -332,7 +386,7 @@ function toMyanmar(input,type) {
 	myanr['ī'] = 'ီ';
 	myanr['u'] = 'ု';
 	myanr['ū'] = 'ူ';
-	myanr['e'] = 'ေ'; 
+	myanr['e'] = 'ေ';
 //	myanr['o'] = 'ေā'; // later
 	myanr['ṃ'] = 'ံ';
 	myanr['k'] = 'က';
@@ -367,9 +421,9 @@ function toMyanmar(input,type) {
 	myanr['v'] = 'ဝ';
 	myanr['s'] = 'သ';
 	myanr['h'] = 'ဟ';
-	
+
 	var cons = [];
-	
+
 	cons['k'] = 'က';
 	cons['g'] = 'ဂ';
 	cons['ṅ'] = 'င';
@@ -393,15 +447,15 @@ function toMyanmar(input,type) {
 	cons['s'] = 'သ';
 	cons['h'] = 'ဟ';
 
-	
+
 	var spec = []; // takes special aa
 	spec['kh'] = 1;
 	spec['g'] = 1;
 	spec['d'] = 1;
 	spec['dh'] = 1;
 	spec['p'] = 1;
-	spec['v'] = 1; 
-	
+	spec['v'] = 1;
+
 	var im, i0, i1, i2, i3
 	var output = '';
 	var i = 0;
@@ -416,7 +470,7 @@ function toMyanmar(input,type) {
 		i1 = input.charAt(i);
 		i2 = input.charAt(i+1);
 		i3 = input.charAt(i+2);
-		
+
 		if (vowel[i1]) {
 			if (i == 0 || i0 == 'a') output += vowel[i1];
 			else if (i1 == 'ā') {
@@ -432,13 +486,13 @@ function toMyanmar(input,type) {
 			}
 			i++;
 			longa = false;
-		}		
+		}
 		else if (myanr[i1+i2] && i2 == 'h') {	// two character match
 			output += myanr[i1+i2];
 			if (i3 != 'y' && !longa) longa = i1+i2; // gets first letter in conjunct for special long a check
 			if(cons[i3]) output += '္';
 			i += 2;
-		}					
+		}
 		else if (myanr[i1] && i1 != 'a') {	// one character match except a
 			output += myanr[i1];
 			i++;
@@ -446,16 +500,16 @@ function toMyanmar(input,type) {
 			if(cons[i2] && i1 != 'ṃ') {
 				output += '္';
 			}
-		}					
+		}
 		else if (!myanr[i1]) {
 			output += i1;
-			i++;				
+			i++;
 			if (vowel[i2]) {  // word-beginning vowel marker
 				if (vowel[i2+i3]) {
 					output += vowel[i2+i3];
-					i += 2;	
+					i += 2;
 				}
-				else { 
+				else {
 					output += vowel[i2];
 					i++;
 				}
@@ -469,7 +523,7 @@ function toMyanmar(input,type) {
 	}
 
 	// fudges
-	
+
 	output = output.replace(/ဉ္ဉ/g, 'ည');
 	output = output.replace(/္ယ/g, 'ျ');
 	output = output.replace(/္ရ/g, 'ြ');
@@ -480,8 +534,8 @@ function toMyanmar(input,type) {
 
 	output = output.replace(/\`+/g, '"');
 	return output;
-}	
-	
+}
+
 
 
 function toDeva(input,type) {
@@ -497,7 +551,7 @@ function toDeva(input,type) {
 	vowel['ū'] = " ऊ";
 	vowel['e'] = " ए";
 	vowel['o'] = " ओ";
-	
+
 	var devar = [];
 
 	devar['ā'] = 'ा';
@@ -540,7 +594,7 @@ function toDeva(input,type) {
 	devar['v'] = 'व';
 	devar['s'] = 'स';
 	devar['h'] = 'ह';
-	
+
 	var i0 = '';
 	var i1 = '';
 	var i2 = '';
@@ -550,7 +604,7 @@ function toDeva(input,type) {
 	var output = '';
 	var cons = 0;
 	var i = 0;
-	
+
 	input = input.replace(/\&quot;/g, '`');
 
 	while (i < input.length) {
@@ -560,18 +614,18 @@ function toDeva(input,type) {
 		i3 = input.charAt(i+2);
 		i4 = input.charAt(i+3);
 		i5 = input.charAt(i+4);
-		
+
 		if (i == 0 && vowel[i1]) { // first letter vowel
 			output += vowel[i1];
 			i += 1;
-		}		
+		}
 		else if (i2 == 'h' && devar[i1+i2]) {		// two character match
 			output += devar[i1+i2];
 			if (i3 && !vowel[i3] && i2 != 'ṃ') {
 				output += '्';
 			}
 			i += 2;
-		}					
+		}
 		else if (devar[i1]) {	// one character match except a
 			output += devar[i1];
 			if (i2 && !vowel[i2] && !vowel[i1] && i1 != 'ṃ') {
@@ -593,7 +647,7 @@ function toDeva(input,type) {
 	if (cons[i1]) output += '्';
 	output = output.replace(/\`+/g, '"');
 	return output;
-}	
+}
 
 function toThai(input) {
 	input = input.toLowerCase().replace(/ṁ/g,'ṃ');
@@ -655,7 +709,7 @@ function toThai(input) {
 	thair['h'] = 'ห';
 
 	var cons = [];
-	
+
 	cons['k'] = '1';
 	cons['g'] = '1';
 	cons['ṅ'] = '1';
@@ -687,7 +741,7 @@ function toThai(input) {
 	var i5 = '';
 	var output = '';
 	var i = 0;
-	
+
 	input = input.replace(/\&quot;/g, '`');
 
 	while (i < input.length) {
@@ -698,7 +752,7 @@ function toThai(input) {
 		i3 = input.charAt(i+2);
 		i4 = input.charAt(i+3);
 		i5 = input.charAt(i+4);
-		
+
 		if (vowel[i1]) {
 			if (i1 == 'o' || i1 == 'e') {
 				output += thair[i1] + thair['a'];
@@ -707,43 +761,43 @@ function toThai(input) {
 			else {
 				if (i == 0) {
 					output += thair['a'];
-				}	
+				}
 				if (i1 == 'i' && i2 == 'ṃ') { // special i.m character
 					output += thair[i1+i2];
-					i++;				
+					i++;
 				}
 				else if (i1 != 'a') { output += thair[i1]; }
 				i++;
 			}
-		}		
+		}
 		else if (thair[i1+i2] && i2 == 'h') {		// two character match
 			if (i3 == 'o' || i3 == 'e') {
 				output += thair[i3];
 				i++;
-			}	
+			}
 			output += thair[i1+i2];
 			if (cons[i3]) output += 'ฺ';
 			i = i + 2;
-		}					
+		}
 		else if (thair[i1] && i1 != 'a') {		// one character match except a
 			if (i2 == 'o' || i2 == 'e') {
 				output += thair[i2];
 				i++;
-			}	
+			}
 			output += thair[i1];
 			if (cons[i2] && i1 != 'ṃ') output += 'ฺ';
 			i++;
-		}					
+		}
 		else if (!thair[i1]) {
 			output += i1;
 			if (cons[i0] || (i0 == 'h' && cons[im])) output += 'ฺ';
-			i++;				
+			i++;
 			if (i2 == 'o' || i2 == 'e') {  // long vowel first
 				output += thair[i2];
 				i++;
 			}
 			if (vowel[i2]) {  // word-beginning vowel marker
-				output += thair['a']; 
+				output += thair['a'];
 			}
 		}
 		else { // a
@@ -753,18 +807,18 @@ function toThai(input) {
 	if (cons[i1]) output += 'ฺ';
 	output = output.replace(/\`+/g, '"');
 	return output;
-}	
+}
 
 function fromThai(input) {
 
 	output = input.replace(/([อกขคฆงจฉชฌญฏฐฑฒณตถทธนปผพภมยรลฬวสห])(?!ฺ)/g, "$1a").replace(/([เโ])([อกขคฆงจฉชฌญฏฐฑฒณตถทธนปผพภมยรลฬวสหฺฺ]+a)/g, "$2$1").replace(/[a]([าิีึุูเโ])/g, "$1").replace(/ฺ/g, "");
-	
+
 	output = output.replace(/อ/g,'').replace(/า/g,'ā').replace(/ิ/g,'i').replace(/ี/g,'ī').replace(/ึ/g,'iṃ').replace(/ุ/g,'u').replace(/ู/g,'ū').replace(/เ/g,'e').replace(/โ/g,'o').replace(/ํ/g,'ṃ').replace(/ก/g,'k').replace(/ข/g,'kh').replace(/ค/g,'g').replace(/ฆ/g,'gh').replace(/ง/g,'ṅ').replace(/จ/g,'c').replace(/ฉ/g,'ch').replace(/ช/g,'j').replace(/ฌ/g,'jh').replace(//g,'ñ').replace(/ญ/g,'ñ').replace(/ฏ/g,'ṭ').replace(//g,'ṭh').replace(/ฐ/g,'ṭh').replace(/ฑ/g,'ḍ').replace(/ฒ/g,'ḍh').replace(/ณ/g,'ṇ').replace(/ต/g,'t').replace(/ถ/g,'th').replace(/ท/g,'d').replace(/ธ/g,'dh').replace(/น/g,'n').replace(/ป/g,'p').replace(/ผ/g,'ph').replace(/พ/g,'b').replace(/ภ/g,'bh').replace(/ม/g,'m').replace(/ย/g,'y').replace(/ร/g,'r').replace(/ล/g,'l').replace(/ฬ/g,'ḷ').replace(/ว/g,'v').replace(/ส/g,'s').replace(/ห/g,'h').replace(/๐/g,'0').replace(/๑/g,'1').replace(/๒/g,'2').replace(/๓/g,'3').replace(/๔/g,'4').replace(/๕/g,'5').replace(/๖/g,'6').replace(/๗/g,'7').replace(/๘/g,'8').replace(/๙/g,'9').replace(/ฯ/g,'...');
 
 	output = output.replace(//g,'');
 
 	return output;
-}	
+}
 
 function translit(data) {
 	if(!data || data == '' || typeof(data) != 'string')
